@@ -1,0 +1,116 @@
+/* Import a custom font for better aesthetics */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Base styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Skip to Main Content link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 999;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* Header styling */
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation styling with flexbox and three properties */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color: #333;
+  padding: 10px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  transition: background-color 0.3s ease;
+}
+
+/* Image styling with box model */
+img {
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Gallery grid layout with at least two columns */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Hover effect on gallery images */
+.gallery img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* nth-child selector for alternating styles */
+.gallery img:nth-child(odd) {
+  border-radius: 5px;
+}
+
+.gallery img:nth-child(even) {
+  border-radius: 20px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
